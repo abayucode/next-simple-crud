@@ -13,16 +13,3 @@ export default function BookingPage() {
   )
 }
 
-// Component
-//   ChildComponent 1
-//     p1
-//   ChildComponent 2 
-//
-//
-//
-//
-//
-//
-//
-//
-//

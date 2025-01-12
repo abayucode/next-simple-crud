@@ -1,7 +1,7 @@
 "use client"
 
 import { getAllCar, submitOrder } from "@/services/carService";
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import Swal from "sweetalert2";
 
 
@@ -32,7 +32,7 @@ export default function FormOrderComponent(props: any) {
 
   const [cars, setCars] = useState<CarsData | []>([])
 
-  const handleInputForm = (event: React.ChangeEvent<HTMLInputElement> | HTMLSelectElement) => {
+  const handleInputForm = (event: React.ChangeEvent<HTMLInputElement> | React.ChangeEvent<HTMLSelectElement>) => {
     const { name, value } = event.target;
 
     setFormData({

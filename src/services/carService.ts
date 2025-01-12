@@ -30,3 +30,20 @@ export async function submitOrder(params: any) {
     console.error(error)
   }
 }
+
+export async function addNewCar(params:any, accessToken:string) {
+  try {
+    const result = await apiFetch('http://103.127.136.166:1801/api/cars/create', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'Authorization': `Bearer ${accessToken}`
+      },
+      body: JSON.stringify(params)
+    })
+
+    return result
+  } catch (error) {
+    console.error(error)
+  }
+}
